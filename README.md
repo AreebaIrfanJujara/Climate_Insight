@@ -5,22 +5,6 @@
 **Live Demo:** `<paste your Streamlit Community Cloud link here once deployed>`
 
 **Demo Video:** `<paste your 1–2 min screen recording link here (YouTube/Loom/Drive)>`
-
----
-
-## 📖 Table of Contents
-- [Problem Statement](#-problem-statement)
-- [Solution Overview](#-solution-overview)
-- [Key Features](#-key-features)
-- [Screenshots](#-screenshots)
-- [Technologies Used](#-technologies-used)
-- [Installation](#-installation)
-- [How to Run](#-how-to-run)
-- [Usage](#-usage)
-- [Project Structure](#-project-structure)
-- [Future Improvements](#-future-improvements)
-- [Author](#-author)
-
 ---
 
 ## ❗ Problem Statement
@@ -120,7 +104,7 @@ climate-insight/
 - 🗣️ Multi-language support for wider accessibility
 - ♿ Accessibility testing with real older-adult and child users
 - 📊 Additional datasets (sea level, extreme weather frequency, CO₂ emissions)
-- 🔔 Personalized action tracking saved across sessions
+
 
 ## 👤 Author
 
