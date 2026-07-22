@@ -1,21 +1,21 @@
 import requests
+def get_coordinates(name):
+    url = "https://geocoding-api.open-meteo.com/v1/search"
+    extra = {
+        "city_name": name,
+        "count": 1
+     }
+
+    response=requests.get(url,params=extra)
+
+    if response.statuscode==200:
+        data=response.json()
+        if data["results"]:
+            return data["results"][0]["latitude"], data["results"][0]["longitude"]
+        else:
+            return None
 
 
-def get_weather(latitude, longitude):
-    url = "https://api.open-meteo.com/v1/forecast"
 
-    params = {
-        "latitude": latitude,
-        "longitude": longitude,
-        "current": [
-            "temperature_2m",
-            "relative_humidity_2m",
-            "wind_speed_10m"
-        ]
-    }
 
-    response = requests.get(url, params=params)
 
-    data = response.json()
-
-    return data
