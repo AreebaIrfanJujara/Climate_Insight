@@ -1,9 +1,31 @@
-from weather_api import get_weather
+from src import weather_api
+from src import analysis
 
 
-print("🌍 Climate Insight Started")
+city = "London"
 
+coordinates = weather_api.get_coordinates(city)
 
-weather = get_weather(24.8607, 67.0011)  # Karachi coordinates
+if coordinates:
 
-print(weather)
+    lat, lon = coordinates
+
+    print(f"Fetching climate data for {city}")
+
+    live_data = weather_api.get_weather(lat, lon)
+
+    history_data = weather_api.get_climate_history(lat, lon)
+
+    live_temp = live_data[0]
+
+    result = analysis.get_warming_summary(
+        city,
+        live_temp,
+        history_data
+    )
+
+    print("\n--- Climate Insight ---")
+    print(result)
+
+else:
+    print("City not found")

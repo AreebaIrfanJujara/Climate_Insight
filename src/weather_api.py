@@ -72,3 +72,33 @@ if coordinates:
 else:
     print("Could not fetch coordinates for the given location.")    
 
+
+def get_climate_history(lat, lon):
+    
+    endpoint = "https://archive-api.open-meteo.com/v1/archive"
+
+
+    info = {
+        "latitude": lat,
+        "longitude": lon,
+        "start_date": "1980-01-01",
+        "end_date": "2025-12-31",
+        "daily": "temperature_2m_mean",
+        "timezone": "auto",
+    }
+    try:
+        response = requests.get(endpoint, params=info, timeout=10).json()
+        temps = response["daily"]["temperature_2m_mean"]
+        clean_temps = [t for t in temps if t is not None]
+
+       
+        start_temp = sum(clean_temps[:366]) / 366  
+        end_temp = sum(clean_temps[-365:]) / 365
+
+        
+        return [start_temp, end_temp]
+
+    except Exception as e:
+        print("Error getting history:", e)
+        return None
+
