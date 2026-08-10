@@ -83,14 +83,12 @@ This opens the app automatically in your browser at `http://localhost:8501`.
 
 ```
 climate-insight/
-├── app.py                     # Main Streamlit entry point (city input, dropdown, display)
+├── app.py                 # Main Streamlit entry point
 ├── src/
-│   ├── weather_api.py         # Fetches coordinates, live weather & historical data from Open-Meteo
-│   ├── analysis.py            # Turns fetched data into plain-English insight sentences
-│   ├── charts.py              # Builds the historical temperature trend chart
-│   └── recommendation.py      # Generates "What should I do?" action tips
-├── assets/
-│   └── images/                 # Screenshots used in this README
+│   ├── __init__.py
+│   ├── weather_data.py    # Fetches coordinates & live weather from Open-Meteo
+│   ├── analysis.py        # Turns data into plain-English insight sentences
+│   └── climate.py         # Fetches and processes historical climate data
 ├── requirements.txt
 ├── .gitignore
 └── README.md
