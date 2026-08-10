@@ -35,5 +35,12 @@ if city:
             if history_data:
                 st.line_chart(history_data)
 
+            st.subheader("Why does it matter?")
+            st.write("Small shifts in average temperature affect rainfall patterns, heatwaves, and daily life in your city — seeing your own city's numbers makes climate change personal, not abstract.")
+
+            st.subheader("What should I do?")
+            for tip in analysis.get_action_tips():
+                st.checkbox(tip)
+
     else:
         st.error("City not found")

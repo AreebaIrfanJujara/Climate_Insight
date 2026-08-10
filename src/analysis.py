@@ -33,3 +33,9 @@ def get_warming_summary(city_name, live_temp, history):
         f"with almost no temperature change from {first_year} to {last_year}."
     )
     
+def get_action_tips():
+    return [
+        "Walk, bike, or carpool for short trips.",
+        "Unplug devices you're not using.",
+        "Support local, seasonal food when you can.",
+    ]
