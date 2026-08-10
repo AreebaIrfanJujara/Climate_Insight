@@ -2,9 +2,11 @@
 
 > A human-centered climate visualization prototype that answers three simple questions: **What is happening? Why does it matter? What should I do?**
 
-**Live Demo:** `<paste your Streamlit Community Cloud link here once deployed>`
+**Live Demo:** `<https://climateinsight-areebairfanjujara.streamlit.app/>
 
-**Demo Video:** `<paste your 1–2 min screen recording link here (YouTube/Loom/Drive)>`
+`
+
+**Demo Video:** `<https://drive.google.com/file/d/1ts-c-f9SKR61LP-2UUaJ_oInt6GbjFWw/view?usp=sharing>`
 ---
 
 ## ❗ Problem Statement
