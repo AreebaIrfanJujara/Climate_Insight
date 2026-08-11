@@ -83,8 +83,9 @@ climate-insight/
 │ ├── analysis.py # Turns data into plain-English insight sentences & action tips
 
 │ └── climate.py # Fetches and processes historical climate data
+
 ├── requirements.txt
-├── .gitignore
+
 └── README.md
 
 
