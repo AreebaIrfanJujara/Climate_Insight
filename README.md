@@ -69,12 +69,19 @@ This opens the app automatically in your browser at `http://localhost:8501`.
 7. Explore the chart to see how temperatures in your area have changed over time.
 
 ## 📁 Project Structure
+
 climate-insight/
+
 ├── app.py # Main Streamlit entry point
+
 ├── src/
+
 │ ├── init.py
+
 │ ├── weather_data.py # Fetches coordinates & live weather from Open-Meteo
+
 │ ├── analysis.py # Turns data into plain-English insight sentences & action tips
+
 │ └── climate.py # Fetches and processes historical climate data
 ├── requirements.txt
 ├── .gitignore
